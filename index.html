@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SDG 12: Responsible Consumption and Production - A comprehensive guide to sustainable practices">
+    <title>SDG 12: Responsible Consumption & Production</title>
+    
+    <!-- Google Fonts - Nature-inspired typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🌍</span>
+                <span class="logo-text">SDG 12</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#problems" class="nav-link">Global Issues</a></li>
+                <li><a href="#data" class="nav-link">Data & Charts</a></li>
+                <li><a href="#sectors" class="nav-link">Sectors</a></li>
+                <li><a href="#action" class="nav-link">Take Action</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">UN Sustainable Development Goal 12</div>
+                <h1 class="hero-title">Responsible Consumption & Production</h1>
+                <p class="hero-subtitle">Ensure sustainable consumption and production patterns for a healthier planet and future generations</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2 billion</div>
+                        <div class="stat-label">Tonnes of food wasted annually</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">11 million</div>
+                        <div class="stat-label">Tonnes of plastic waste yearly</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1/3</div>
+                        <div class="stat-label">Of all food produced is wasted</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#introduction" class="btn btn-primary">Learn More</a>
+                    <a href="#action" class="btn btn-secondary">Take Action</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Sustainable living" loading="lazy">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section introduction" id="introduction">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Understanding SDG 12</span>
+                <h2 class="section-title">What is SDG 12?</h2>
+            </div>
+            <div class="intro-grid">
+                <div class="intro-content">
+                    <p class="lead">SDG 12 aims to ensure sustainable consumption and production patterns, which is essential for fostering sustainable development. It addresses the efficient management of natural resources, the reduction of waste and emissions, and the adoption of sustainable practices across all sectors.</p>
+                    
+                    <div class="intro-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🎯</div>
+                            <h3>The Goal</h3>
+                            <p>Ensure sustainable consumption and production patterns by promoting resource and energy efficiency, sustainable infrastructure, and providing access to basic services.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🌍</div>
+                            <h3>Why It Matters</h3>
+                            <p>Our planet's resources are limited. With the global population expected to reach 9.7 billion by 2050, we need to change how we produce and consume goods to sustain our planet.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">📊</div>
+                            <h3>Current Status</h3>
+                            <p>If the global population reaches 9.7 billion by 2050, the equivalent of almost three planets could be required to provide the natural resources needed to sustain current lifestyles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="targets-section">
+                <h3 class="subsection-title">UN Key Targets for SDG 12</h3>
+                <div class="targets-grid">
+                    <div class="target-card">
+                        <div class="target-number">12.1</div>
+                        <p>Implement the 10-Year Framework of Programs on Sustainable Consumption and Production Patterns</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-number">12.2</div>
+                        <p>Achieve sustainable management and efficient use of natural resources by 2030</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-number">12.3</div>
+                        <p>Halve per capita global food waste at retail and consumer levels by 2030</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-number">12.4</div>
+                        <p>Achieve environmentally sound management of chemicals and wastes throughout their life cycle</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-number">12.5</div>
+                        <p>Substantially reduce waste generation through prevention, reduction, recycling, and reuse by 2030</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-number">12.6</div>
+                        <p>Encourage companies to adopt sustainable practices and integrate sustainability information into reporting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Problems Section -->
+    <section class="section problems" id="problems">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Critical Issues</span>
+                <h2 class="section-title">Current Global Problems</h2>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-image">
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&q=80" alt="Overconsumption" loading="lazy">
+                    </div>
+                    <div class="problem-content">
+                        <div class="problem-icon">🛒</div>
+                        <h3>Overconsumption</h3>
+                        <p><strong>The Issue:</strong> Global material consumption has accelerated rapidly, doubling from 2000 to 2019. High-income countries consume 10 times more materials per capita than low-income countries.</p>
+                        <ul class="problem-stats">
+                            <li>• 100 billion tonnes of materials consumed annually</li>
+                            <li>• Only 8.6% of materials are recycled globally</li>
+                            <li>• Consumption rates increasing faster than population growth</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-image">
+                        <img src="https://images.unsplash.com/photo-1605600659908-0ef719419d41?w=600&q=80" alt="Waste generation" loading="lazy">
+                    </div>
+                    <div class="problem-content">
+                        <div class="problem-icon">🗑️</div>
+                        <h3>Waste Generation</h3>
+                        <p><strong>The Issue:</strong> Global waste generation is expected to increase by 70% by 2050, reaching 3.4 billion tonnes annually. Most waste ends up in landfills or the ocean, causing severe environmental damage.</p>
+                        <ul class="problem-stats">
+                            <li>• 2.01 billion tonnes of municipal solid waste generated yearly</li>
+                            <li>• 33% of waste is not managed in an environmentally safe manner</li>
+                            <li>• Electronic waste increased 21% in five years</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-image">
+                        <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&q=80" alt="Resource depletion" loading="lazy">
+                    </div>
+                    <div class="problem-content">
+                        <div class="problem-icon">⛏️</div>
+                        <h3>Resource Depletion</h3>
+                        <p><strong>The Issue:</strong> We are consuming Earth's resources at an unsustainable rate. If current consumption patterns continue, we would need 1.7 Earths to sustain our current lifestyles.</p>
+                        <ul class="problem-stats">
+                            <li>• Earth Overshoot Day arrives earlier each year</li>
+                            <li>• Water scarcity affects 40% of the global population</li>
+                            <li>• Topsoil being lost 10-40 times faster than replenished</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-image">
+                        <img src="https://images.unsplash.com/photo-1569163139394-de4798aa62b0?w=600&q=80" alt="Environmental impact" loading="lazy">
+                    </div>
+                    <div class="problem-content">
+                        <div class="problem-icon">🌡️</div>
+                        <h3>Environmental Impact</h3>
+                        <p><strong>The Issue:</strong> Unsustainable consumption and production are the primary drivers of climate change, biodiversity loss, and pollution. They account for 60% of greenhouse gas emissions.</p>
+                        <ul class="problem-stats">
+                            <li>• Food systems account for 25-30% of GHG emissions</li>
+                            <li>• Fashion industry produces 10% of global carbon emissions</li>
+                            <li>• Plastic production creates 1.8 billion tonnes CO2 annually</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data & Charts Section -->
+    <section class="section data-charts" id="data">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visualizing the Problem</span>
+                <h2 class="section-title">Data & Statistics</h2>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Global Waste Generation by Sector</h3>
+                        <p>Annual waste production in million tonnes</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="wasteBySectr"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Global Food Waste Distribution</h3>
+                        <p>Where food waste occurs in the supply chain</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="foodWasteChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Material Consumption Growth (2000-2023)</h3>
+                        <p>Global material footprint in billion tonnes</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="consumptionTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Plastic Waste by Source</h3>
+                        <p>Annual plastic waste generation by sector</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="plasticWasteChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card full-width">
+                    <div class="chart-header">
+                        <h3>Recycling Rates by Material Type</h3>
+                        <p>Global recycling effectiveness across different materials</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="recyclingRatesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section class="section sectors" id="sectors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sector Analysis</span>
+                <h2 class="section-title">Problems & Solutions by Sector</h2>
+            </div>
+
+            <!-- Household Sector -->
+            <div class="sector-card">
+                <div class="sector-header">
+                    <div class="sector-icon">🏠</div>
+                    <h3>Household Sector</h3>
+                </div>
+                <div class="sector-content">
+                    <div class="sector-problem">
+                        <h4>Problem</h4>
+                        <p>Households are responsible for a significant portion of global consumption and waste. In developed countries, households generate an average of 2.1 kg of waste per person daily, with much of it being avoidable.</p>
+                        <ul>
+                            <li>Food waste: 570 million tonnes annually from households</li>
+                            <li>Single-use plastics dominate daily consumption</li>
+                            <li>Energy-inefficient appliances increase carbon footprint</li>
+                            <li>Fast fashion culture leads to textile waste</li>
+                        </ul>
+                    </div>
+                    <div class="sector-impact">
+                        <h4>Impact</h4>
+                        <p>Household consumption accounts for 60% of global greenhouse gas emissions and 50-80% of total land, material, and water use. Food waste from households alone costs the global economy $940 billion annually.</p>
+                    </div>
+                    <div class="sector-solution">
+                        <h4>Solutions</h4>
+                        <ul class="solution-list">
+                            <li><strong>Reduce food waste:</strong> Plan meals, store food properly, compost organic waste</li>
+                            <li><strong>Choose reusables:</strong> Replace single-use items with reusable alternatives</li>
+                            <li><strong>Buy sustainable:</strong> Choose products with minimal packaging and eco-certifications</li>
+                            <li><strong>Energy efficiency:</strong> Use LED bulbs, energy-efficient appliances, solar power</li>
+                            <li><strong>Practice 5 R's:</strong> Refuse, Reduce, Reuse, Repair, Recycle</li>
+                            <li><strong>Conscious shopping:</strong> Buy only what you need, support local and sustainable brands</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industrial & Manufacturing Sector -->
+            <div class="sector-card">
+                <div class="sector-header">
+                    <div class="sector-icon">🏭</div>
+                    <h3>Industrial & Manufacturing Sector</h3>
+                </div>
+                <div class="sector-content">
+                    <div class="sector-problem">
+                        <h4>Problem</h4>
+                        <p>Industrial processes are resource-intensive and generate massive amounts of waste and emissions. Manufacturing accounts for 20% of global CO2 emissions and consumes significant water and raw materials.</p>
+                        <ul>
+                            <li>Linear production models: take-make-dispose approach</li>
+                            <li>Inefficient resource use: 90% of raw materials never become part of final products</li>
+                            <li>Chemical pollution from textile, electronics, and chemical industries</li>
+                            <li>Hazardous industrial waste affecting ecosystems</li>
+                        </ul>
+                    </div>
+                    <div class="sector-impact">
+                        <h4>Impact</h4>
+                        <p>Industrial activities contribute to air pollution (responsible for 7 million premature deaths annually), water contamination, and habitat destruction. The fashion industry alone produces 92 million tonnes of textile waste yearly.</p>
+                    </div>
+                    <div class="sector-solution">
+                        <h4>Solutions</h4>
+                        <ul class="solution-list">
+                            <li><strong>Circular economy:</strong> Design products for durability, repairability, and recyclability</li>
+                            <li><strong>Clean production:</strong> Adopt cleaner production techniques and renewable energy</li>
+                            <li><strong>Industrial symbiosis:</strong> Share resources and by-products between companies</li>
+                            <li><strong>Zero waste manufacturing:</strong> Implement waste minimization and upcycling programs</li>
+                            <li><strong>Sustainable materials:</strong> Use recycled, bio-based, and non-toxic materials</li>
+                            <li><strong>Certification:</strong> Obtain ISO 14001, B-Corp, or Cradle-to-Cradle certifications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agricultural Sector -->
+            <div class="sector-card">
+                <div class="sector-header">
+                    <div class="sector-icon">🌾</div>
+                    <h3>Agricultural Sector</h3>
+                </div>
+                <div class="sector-content">
+                    <div class="sector-problem">
+                        <h4>Problem</h4>
+                        <p>Agriculture uses 70% of global freshwater and occupies 40% of land area. Industrial farming relies heavily on chemical fertilizers and pesticides, causing environmental degradation and biodiversity loss.</p>
+                        <ul>
+                            <li>1.3 billion tonnes of food lost or wasted across the supply chain</li>
+                            <li>Monoculture farming depletes soil nutrients and biodiversity</li>
+                            <li>Overuse of chemical inputs pollutes water sources</li>
+                            <li>Livestock farming contributes 14.5% of global GHG emissions</li>
+                        </ul>
+                    </div>
+                    <div class="sector-impact">
+                        <h4>Impact</h4>
+                        <p>Agricultural activities are responsible for 80% of tropical deforestation, 70% of freshwater withdrawal, and 23% of total GHG emissions. Soil degradation affects 33% of global agricultural land.</p>
+                    </div>
+                    <div class="sector-solution">
+                        <h4>Solutions</h4>
+                        <ul class="solution-list">
+                            <li><strong>Sustainable farming:</strong> Practice crop rotation, agroforestry, and organic farming</li>
+                            <li><strong>Precision agriculture:</strong> Use technology to optimize resource use and reduce waste</li>
+                            <li><strong>Reduce food loss:</strong> Improve storage, processing, and transportation infrastructure</li>
+                            <li><strong>Water management:</strong> Implement drip irrigation and rainwater harvesting</li>
+                            <li><strong>Regenerative agriculture:</strong> Build soil health through composting and cover cropping</li>
+                            <li><strong>Plant-based shift:</strong> Encourage reduced meat consumption and alternative proteins</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate & Business Sector -->
+            <div class="sector-card">
+                <div class="sector-header">
+                    <div class="sector-icon">🏢</div>
+                    <h3>Corporate & Business Sector</h3>
+                </div>
+                <div class="sector-content">
+                    <div class="sector-problem">
+                        <h4>Problem</h4>
+                        <p>Many corporations prioritize profit over sustainability, contributing to overproduction, planned obsolescence, and exploitative supply chains. Only 30% of companies worldwide have sustainability strategies.</p>
+                        <ul>
+                            <li>Greenwashing: misleading environmental claims to consumers</li>
+                            <li>Lack of transparency in supply chain practices</li>
+                            <li>Overproduction driven by profit maximization</li>
+                            <li>Minimal corporate accountability for environmental damage</li>
+                        </ul>
+                    </div>
+                    <div class="sector-impact">
+                        <h4>Impact</h4>
+                        <p>100 companies are responsible for 71% of global GHG emissions. Corporate practices drive demand for fast fashion, planned obsolescence, and excessive packaging, creating systemic waste issues.</p>
+                    </div>
+                    <div class="sector-solution">
+                        <h4>Solutions</h4>
+                        <ul class="solution-list">
+                            <li><strong>ESG integration:</strong> Embed Environmental, Social, and Governance criteria into business models</li>
+                            <li><strong>Transparent reporting:</strong> Publish annual sustainability reports with measurable targets</li>
+                            <li><strong>Circular business models:</strong> Shift from ownership to service-based models</li>
+                            <li><strong>Sustainable supply chains:</strong> Ensure ethical sourcing and fair labor practices</li>
+                            <li><strong>Carbon neutrality:</strong> Set science-based emission reduction targets</li>
+                            <li><strong>Stakeholder engagement:</strong> Involve communities and consumers in sustainability decisions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Government & Policy Sector -->
+            <div class="sector-card">
+                <div class="sector-header">
+                    <div class="sector-icon">🏛️</div>
+                    <h3>Government & Policy Sector</h3>
+                </div>
+                <div class="sector-content">
+                    <div class="sector-problem">
+                        <h4>Problem</h4>
+                        <p>Many governments lack comprehensive policies for sustainable consumption and production. Weak enforcement of environmental regulations allows continued exploitation of natural resources.</p>
+                        <ul>
+                            <li>Subsidies for fossil fuels ($500 billion annually) exceed renewable energy support</li>
+                            <li>Inadequate waste management infrastructure in developing countries</li>
+                            <li>Lack of extended producer responsibility (EPR) laws</li>
+                            <li>Insufficient international cooperation on environmental issues</li>
+                        </ul>
+                    </div>
+                    <div class="sector-impact">
+                        <h4>Impact</h4>
+                        <p>Policy gaps result in continued environmental degradation, unequal resource distribution, and slower transition to sustainable economies. Only 80 countries have national policies for sustainable consumption.</p>
+                    </div>
+                    <div class="sector-solution">
+                        <h4>Solutions</h4>
+                        <ul class="solution-list">
+                            <li><strong>Regulatory frameworks:</strong> Implement strict environmental laws and EPR schemes</li>
+                            <li><strong>Economic incentives:</strong> Tax breaks for green businesses, carbon pricing mechanisms</li>
+                            <li><strong>Public procurement:</strong> Prioritize sustainable products in government purchases</li>
+                            <li><strong>Waste management:</strong> Invest in recycling infrastructure and circular economy systems</li>
+                            <li><strong>International cooperation:</strong> Strengthen global agreements on climate and waste</li>
+                            <li><strong>Education campaigns:</strong> Promote public awareness of sustainable practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Sector -->
+            <div class="sector-card">
+                <div class="sector-header">
+                    <div class="sector-icon">📚</div>
+                    <h3>Education Sector</h3>
+                </div>
+                <div class="sector-content">
+                    <div class="sector-problem">
+                        <h4>Problem</h4>
+                        <p>Sustainability education is not integrated into most curricula. Many educational institutions themselves have unsustainable practices, from single-use plastics in cafeterias to energy-inefficient buildings.</p>
+                        <ul>
+                            <li>Limited environmental literacy among students and educators</li>
+                            <li>Lack of hands-on sustainability projects in schools</li>
+                            <li>Educational institutions generating significant waste</li>
+                            <li>Minimal focus on systems thinking and circular economy concepts</li>
+                        </ul>
+                    </div>
+                    <div class="sector-impact">
+                        <h4>Impact</h4>
+                        <p>Without proper education, future generations lack the knowledge and skills to address environmental challenges. This perpetuates unsustainable consumption patterns and delays the transition to a sustainable economy.</p>
+                    </div>
+                    <div class="sector-solution">
+                        <h4>Solutions</h4>
+                        <ul class="solution-list">
+                            <li><strong>Curriculum integration:</strong> Incorporate sustainability into all subjects and grade levels</li>
+                            <li><strong>Green campus initiatives:</strong> Implement zero-waste cafeterias, renewable energy, gardens</li>
+                            <li><strong>Experiential learning:</strong> Organize field trips, sustainability projects, eco-clubs</li>
+                            <li><strong>Teacher training:</strong> Provide professional development on sustainability education</li>
+                            <li><strong>Student leadership:</strong> Empower students to lead campus sustainability initiatives</li>
+                            <li><strong>Community partnerships:</strong> Collaborate with local organizations on environmental projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take Action Section -->
+    <section class="section action" id="action">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Make a Difference</span>
+                <h2 class="section-title">How You Can Take Action</h2>
+            </div>
+
+            <div class="action-grid">
+                <div class="action-card">
+                    <div class="action-icon">🛍️</div>
+                    <h3>As a Consumer</h3>
+                    <ul>
+                        <li>Buy only what you need</li>
+                        <li>Choose products with minimal packaging</li>
+                        <li>Support sustainable brands</li>
+                        <li>Repair instead of replace</li>
+                        <li>Share, borrow, or rent items</li>
+                    </ul>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-icon">🍽️</div>
+                    <h3>Reduce Food Waste</h3>
+                    <ul>
+                        <li>Plan meals and make shopping lists</li>
+                        <li>Store food properly to extend shelf life</li>
+                        <li>Compost organic waste</li>
+                        <li>Use leftovers creatively</li>
+                        <li>Support food rescue organizations</li>
+                    </ul>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-icon">♻️</div>
+                    <h3>Practice Recycling</h3>
+                    <ul>
+                        <li>Learn your local recycling rules</li>
+                        <li>Clean and sort recyclables properly</li>
+                        <li>Avoid single-use plastics</li>
+                        <li>Recycle electronics properly</li>
+                        <li>Donate usable items to charity</li>
+                    </ul>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-icon">💡</div>
+                    <h3>Save Energy & Water</h3>
+                    <ul>
+                        <li>Switch to LED lighting</li>
+                        <li>Use energy-efficient appliances</li>
+                        <li>Fix leaky faucets</li>
+                        <li>Take shorter showers</li>
+                        <li>Unplug devices when not in use</li>
+                    </ul>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-icon">🗣️</div>
+                    <h3>Spread Awareness</h3>
+                    <ul>
+                        <li>Educate friends and family</li>
+                        <li>Share sustainability tips on social media</li>
+                        <li>Join environmental groups</li>
+                        <li>Advocate for policy change</li>
+                        <li>Lead by example</li>
+                    </ul>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-icon">🌱</div>
+                    <h3>Support Sustainability</h3>
+                    <ul>
+                        <li>Vote for eco-friendly policies</li>
+                        <li>Invest in sustainable companies</li>
+                        <li>Volunteer for environmental causes</li>
+                        <li>Attend community workshops</li>
+                        <li>Push your workplace to go green</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="impact-calculator">
+                <h3>Calculate Your Impact</h3>
+                <p>Small actions add up to big changes. If everyone made just one sustainable choice daily:</p>
+                <div class="calculator-stats">
+                    <div class="calc-stat">
+                        <div class="calc-number">100M</div>
+                        <div class="calc-label">Tonnes of CO2 saved annually</div>
+                    </div>
+                    <div class="calc-stat">
+                        <div class="calc-number">50M</div>
+                        <div class="calc-label">Tonnes of waste diverted from landfills</div>
+                    </div>
+                    <div class="calc-stat">
+                        <div class="calc-number">1B</div>
+                        <div class="calc-label">People making a difference together</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About SDG 12</h4>
+                    <p>This project aims to educate and inspire action towards sustainable consumption and production patterns for a healthier planet.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Learn More</h4>
+                    <ul>
+                        <li><a href="https://sdgs.un.org/goals/goal12" target="_blank">UN SDG 12 Official Page</a></li>
+                        <li><a href="https://www.worldbank.org/en/topic/environment" target="_blank">World Bank Environment</a></li>
+                        <li><a href="https://www.unenvironment.org/" target="_blank">UN Environment Programme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">Sustainable Living Guide</a></li>
+                        <li><a href="#" target="_blank">Zero Waste Tips</a></li>
+                        <li><a href="#" target="_blank">Circular Economy Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SDG 12 Educational Project. All data sourced from UN, World Bank, and peer-reviewed research.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
