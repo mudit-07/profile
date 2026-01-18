@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 12 - Responsible Consumption and Production</title>
+    <style>
+        /* ==========================================
+           GLOBAL STYLES & RESET
+           ========================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fcf9;
+        }
+
+        /* Smooth scrolling for navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ==========================================
+           NAVIGATION BAR
+           ========================================== */
+        nav {
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d5f3f;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2d5f3f;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1a3d2a;
+        }
+
+        /* Mobile menu toggle button */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #2d5f3f;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* ==========================================
+           HERO SECTION (HOME)
+           ========================================== */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #e3f2fd 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #2d5f3f;
+            margin-bottom: 1rem;
+        }
+
+        .sdg-icon {
+            font-size: 4rem;
+            margin: 1rem 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #4a4a4a;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+
+        /* ==========================================
+           SECTION CONTAINERS
+           ========================================== */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #2d5f3f;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #81c784;
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* ==========================================
+           PROBLEM SECTION
+           ========================================== */
+        .problem-section {
+            background-color: #fff8e1;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-card h3 {
+            color: #d84315;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .problem-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ==========================================
+           INFORMATION / FACTS SECTION
+           ========================================== */
+        .info-section {
+            background-color: #e1f5fe;
+        }
+
+        .info-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .fact-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .fact-list li {
+            padding: 1.5rem;
+            margin: 1rem 0;
+            background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+            border-left: 5px solid #66bb6a;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #424242;
+        }
+
+        .fact-list li strong {
+            color: #2d5f3f;
+        }
+
+        /* ==========================================
+           SOLUTIONS SECTION
+           ========================================== */
+        .solutions-section {
+            background-color: #f3e5f5;
+        }
+
+        .solutions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .solution-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .solution-box h3 {
+            color: #6a1b9a;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .solution-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .solution-box li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+        }
+
+        .solution-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #66bb6a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* ==========================================
+           STUDENT ACTION SECTION
+           ========================================== */
+        .action-section {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .action-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: scale(1.05);
+        }
+
+        .action-card .emoji {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .action-card h3 {
+            color: #f57f17;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .action-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        footer {
+            background: linear-gradient(135deg, #a8e6cf 0%, #81c784 100%);
+            color: #1a3d2a;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        footer .sdg-reference {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* ==========================================
+           RESPONSIVE DESIGN - MOBILE
+           ========================================== */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .nav-links.active {
+                max-height: 400px;
+            }
+
+            .nav-links li {
+                padding: 1rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .problem-grid,
+            .solutions-container,
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ==========================================
+           UTILITY CLASSES
+           ========================================== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8e6cf 0%, #81c784 100%);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🌍 SDG 12</div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#problems">Problems</a></li>
+                <li><a href="#information">Facts</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#action">Take Action</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO SECTION - HOME
+         ========================================== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="sdg-icon">♻️🌱</div>
+            <h1>SDG 12 – Responsible Consumption and Production</h1>
+            <p>
+                Sustainable Development Goal 12 aims to <span class="highlight">ensure sustainable consumption and production patterns</span>. 
+                This means using resources wisely, reducing waste, and making choices that protect our planet for future generations.
+            </p>
+            <p>
+                From the food we eat to the clothes we wear, every choice we make has an impact on Earth. 
+                Let's learn how we can consume responsibly and help create a sustainable future!
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PROBLEM SECTION
+         ========================================== -->
+    <section id="problems" class="problem-section">
+        <h2 class="section-title">The Problems We Face</h2>
+        <div class="problem-grid">
+            <!-- Problem Card 1 -->
+            <div class="problem-card">
+                <div class="problem-icon">🌳</div>
+                <h3>Overconsumption of Resources</h3>
+                <p>
+                    We are using natural resources faster than the Earth can replenish them. 
+                    If everyone consumed like high-income countries, we would need multiple Earths to sustain us!
+                </p>
+            </div>
+
+            <!-- Problem Card 2 -->
+            <div class="problem-card">
+                <div class="problem-icon">🍔</div>
+                <h3>Food Waste</h3>
+                <p>
+                    About one-third of all food produced globally is wasted. That's 1.3 billion tons per year! 
+                    Meanwhile, millions of people go hungry every day.
+                </p>
+            </div>
+
+            <!-- Problem Card 3 -->
+            <div class="problem-card">
+                <div class="problem-icon">🥤</div>
+                <h3>Plastic Pollution</h3>
+                <p>
+                    Over 300 million tons of plastic are produced annually, and much of it ends up in our oceans, 
+                    harming marine life and entering our food chain.
+                </p>
+            </div>
+
+            <!-- Problem Card 4 -->
+            <div class="problem-card">
+                <div class="problem-icon">🏭</div>
+                <h3>Industrial Waste</h3>
+                <p>
+                    Factories and industries generate massive amounts of waste, including toxic chemicals that 
+                    pollute air, water, and soil, affecting human health and ecosystems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         INFORMATION / FACTS SECTION
+         ========================================== -->
+    <section id="information" class="info-section">
+        <h2 class="section-title">Important Facts & Information</h2>
+        <div class="info-content">
+            <p class="text-center" style="font-size: 1.2rem; color: #1976d2; margin-bottom: 2rem;">
+                Understanding the scale of our consumption and production patterns is the first step toward change.
+            </p>
+            
+            <ul class="fact-list">
+                <li>
+                    <strong>By 2050</strong>, the global population is expected to reach 9.6 billion people. 
+                    We would need almost 3 planet Earths to sustain current lifestyles if consumption patterns continue unchanged.
+                </li>
+                <li>
+                    <strong>Water usage:</strong> Globally, 2 billion people live in countries experiencing high water stress. 
+                    Agriculture alone consumes 70% of all freshwater resources.
+                </li>
+                <li>
+                    <strong>E-waste crisis:</strong> The world generates over 50 million tons of electronic waste annually, 
+                    and less than 20% is properly recycled.
+                </li>
+                <li>
+                    <strong>Carbon footprint:</strong> The production and consumption of goods account for approximately 
+                    60% of global greenhouse gas emissions.
+                </li>
+                <li>
+                    <strong>Energy efficiency:</strong> If the global population adopts energy-efficient appliances and lighting, 
+                    we could save $120 billion annually in energy costs.
+                </li>
+            </ul>
+
+            <p style="font-size: 1.1rem; color: #424242; margin-top: 2rem; text-align: center;">
+                <strong>Why does this matter?</strong> Unsustainable consumption and production patterns harm our environment, 
+                deplete resources, contribute to climate change, and create inequality. By changing our habits today, 
+                we can ensure a healthy planet for future generations.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SOLUTIONS SECTION
+         ========================================== -->
+    <section id="solutions" class="solutions-section">
+        <h2 class="section-title">Solutions at Every Level</h2>
+        <div class="solutions-container">
+            <!-- Individual Level Solutions -->
+            <div class="solution-box">
+                <h3>🙋 Individual Level</h3>
+                <ul>
+                    <li>Practice the 3 Rs: Reduce, Reuse, Recycle</li>
+                    <li>Buy only what you need and avoid impulse purchases</li>
+                    <li>Choose products with minimal packaging</li>
+                    <li>Carry reusable bags, bottles, and containers</li>
+                    <li>Compost organic waste at home</li>
+                    <li>Repair items instead of replacing them</li>
+                    <li>Donate or sell items you no longer need</li>
+                    <li>Choose eco-friendly and sustainable products</li>
+                </ul>
+            </div>
+
+            <!-- School Level Solutions -->
+            <div class="solution-box">
+                <h3>🏫 School Level</h3>
+                <ul>
+                    <li>Implement recycling programs in classrooms</li>
+                    <li>Organize awareness campaigns and workshops</li>
+                    <li>Start a school garden to teach sustainable agriculture</li>
+                    <li>Reduce paper use by going digital where possible</li>
+                    <li>Set up composting systems for cafeteria waste</li>
+                    <li>Host swap meets for books, uniforms, and supplies</li>
+                    <li>Install water refill stations to reduce plastic bottles</li>
+                    <li>Create student-led environmental clubs</li>
+                </ul>
+            </div>
+
+            <!-- Government & Industry Level Solutions -->
+            <div class="solution-box">
+                <h3>🏛️ Government & Industry</h3>
+                <ul>
+                    <li>Enforce stricter regulations on industrial waste</li>
+                    <li>Provide incentives for sustainable businesses</li>
+                    <li>Invest in renewable energy and clean technology</li>
+                    <li>Implement extended producer responsibility programs</li>
+                    <li>Ban single-use plastics and harmful materials</li>
+                    <li>Support circular economy initiatives</li>
+                    <li>Educate consumers about sustainable choices</li>
+                    <li>Set targets for waste reduction and resource efficiency</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         STUDENT ACTION SECTION
+         ========================================== -->
+    <section id="action" class="action-section">
+        <h2 class="section-title">What YOU Can Do Today!</h2>
+        <p class="text-center" style="font-size: 1.2rem; color: #555; margin-bottom: 2rem;">
+            Small actions by many people can create big changes. Here are simple eco-friendly habits you can start right away:
+        </p>
+        
+        <div class="action-grid">
+            <!-- Action Card 1 -->
+            <div class="action-card">
+                <div class="emoji">💧</div>
+                <h3>Save Water</h3>
+                <p>Turn off taps when brushing teeth, take shorter showers, and fix leaky faucets to conserve water.</p>
+            </div>
+
+            <!-- Action Card 2 -->
+            <div class="action-card">
+                <div class="emoji">🍽️</div>
+                <h3>Reduce Food Waste</h3>
+                <p>Plan meals, store food properly, and eat leftovers. Share excess food instead of throwing it away.</p>
+            </div>
+
+            <!-- Action Card 3 -->
+            <div class="action-card">
+                <div class="emoji">🛍️</div>
+                <h3>Carry Reusables</h3>
+                <p>Always carry a reusable bag, water bottle, and lunch box to avoid single-use plastics.</p>
+            </div>
+
+            <!-- Action Card 4 -->
+            <div class="action-card">
+                <div class="emoji">♻️</div>
+                <h3>Recycle Properly</h3>
+                <p>Separate your waste into recyclables, compost, and trash. Learn what can and cannot be recycled.</p>
+            </div>
+
+            <!-- Action Card 5 -->
+            <div class="action-card">
+                <div class="emoji">👕</div>
+                <h3>Choose Wisely</h3>
+                <p>Buy quality items that last longer. Consider second-hand shopping and swap clothes with friends.</p>
+            </div>
+
+            <!-- Action Card 6 -->
+            <div class="action-card">
+                <div class="emoji">📚</div>
+                <h3>Spread Awareness</h3>
+                <p>Share what you learn with family and friends. Inspire others to join the sustainability movement!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <p>🌍 School Project on Sustainable Development</p>
+        <p class="sdg-reference">United Nations SDG 12: Responsible Consumption and Production</p>
+        <p>Together, we can build a sustainable future! 🌱</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">© 2026 | Created for Educational Purposes</p>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT - MOBILE MENU TOGGLE
+         ========================================== -->
+    <script>
+        // Get the menu toggle button and navigation links
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        // Add click event listener to toggle menu
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Optional: Add smooth scroll behavior and visual feedback
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation bar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 15px rgba(0,0,0,0.15)';
+            } else {
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
